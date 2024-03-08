@@ -1,11 +1,11 @@
+import axios from "axios";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
-import { CartReducerInitialState } from "../types/reducerTypes";
 import { useNavigate } from "react-router-dom";
 import { saveShippingInfo } from "../redux/reducer/cartReducer";
-import toast from "react-hot-toast";
-import axios from "axios";
 import { server } from "../redux/store";
+import { CartReducerInitialState } from "../types/reducerTypes";
 const Shipping = () => {
 
   const {  cartItems,total} =

@@ -1,14 +1,14 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
+import { useDispatch } from "react-redux";
 import ProductCard from "../components/ProductCard";
 import {
   useCategoriesQuery,
   useSearchProductsQuery,
 } from "../redux/api/productApi";
-import { CustomError } from "../types/apiTypes";
-import toast from "react-hot-toast";
-import { useDispatch } from "react-redux";
-import { CartItems } from "../types/types";
 import { addToCart } from "../redux/reducer/cartReducer";
+import { CustomError } from "../types/apiTypes";
+import { CartItems } from "../types/types";
 
 const Search = () => {
   const [search, setSearch] = useState<string>("");

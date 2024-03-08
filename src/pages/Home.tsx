@@ -1,19 +1,17 @@
-import React from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import ProductCard from "../components/ProductCard";
-import { Link } from "react-router-dom";
-import { useLatestProductsQuery } from "../redux/api/productApi";
-import { server } from "../redux/store";
 import toast from "react-hot-toast";
-import { CartItems } from "../types/types";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
+import ProductCard from "../components/ProductCard";
+import { useLatestProductsQuery } from "../redux/api/productApi";
 import { addToCart } from "../redux/reducer/cartReducer";
+import { CartItems } from "../types/types";
 
 // const swiper = new Swiper();
 

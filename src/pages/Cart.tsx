@@ -1,4 +1,6 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { VscError } from "react-icons/vsc";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -9,11 +11,9 @@ import {
   calculatePrice,
   removeCartItem,
 } from "../redux/reducer/cartReducer";
+import { server } from "../redux/store";
 import { CartReducerInitialState } from "../types/reducerTypes";
 import { CartItems } from "../types/types";
-import toast from "react-hot-toast";
-import axios from "axios";
-import { server } from "../redux/store";
 
 // const cartItems = [
 //   {

@@ -1,15 +1,15 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
-import AdminSidebar from "../../components/admin/AdminSidebar";
+import { FaTrash } from "react-icons/fa";
 import { useSelector } from "react-redux";
-import { UserReducerInitialState } from "../../types/reducerTypes";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import AdminSidebar from "../../components/admin/AdminSidebar";
 import {
   useDeleteProductMutation,
   useProductDetailsQuery,
   useUpdateProductMutation,
 } from "../../redux/api/productApi";
 import { server } from "../../redux/store";
-import { FaTrash } from "react-icons/fa";
+import { UserReducerInitialState } from "../../types/reducerTypes";
 import { responseToast } from "../../utils/features";
 
 const img =

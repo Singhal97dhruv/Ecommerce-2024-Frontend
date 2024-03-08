@@ -1,14 +1,14 @@
 import {
-    AiOutlineSortAscending,
-    AiOutlineSortDescending,
-  } from "react-icons/ai";
-  import {
-    Column,
-    TableOptions,
-    useTable,
-    useSortBy,
-    usePagination,
-  } from "react-table";
+  AiOutlineSortAscending,
+  AiOutlineSortDescending,
+} from "react-icons/ai";
+import {
+  Column,
+  TableOptions,
+  usePagination,
+  useSortBy,
+  useTable,
+} from "react-table";
   
   function TableHOC<T extends Object>(
     columns: Column<T>[],

@@ -1,8 +1,8 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import AdminSidebar from "../../components/admin/AdminSidebar";
 import { useNewProductMutation } from "../../redux/api/productApi";
-import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { UserReducerInitialState } from "../../types/reducerTypes";
 import { responseToast } from "../../utils/features";
 

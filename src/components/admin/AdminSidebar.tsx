@@ -1,10 +1,9 @@
-import React from "react";
 import { IconType } from "react-icons";
-import { Link } from "react-router-dom";
-import { RiCoinFill, RiCoupon2Fill } from "react-icons/ri";
-import { MdPeople, MdSpaceDashboard } from "react-icons/md";
-import { FaChartBar, FaChartLine, FaChartPie, FaShoppingBag, FaStopwatch } from "react-icons/fa";
 import { AiOutlineTransaction } from "react-icons/ai";
+import { FaChartBar, FaChartLine, FaChartPie, FaShoppingBag, FaStopwatch } from "react-icons/fa";
+import { MdPeople, MdSpaceDashboard } from "react-icons/md";
+import { RiCoinFill, RiCoupon2Fill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 
 const AdminSidebar = () => {

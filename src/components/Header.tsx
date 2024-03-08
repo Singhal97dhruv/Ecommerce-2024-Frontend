@@ -1,10 +1,10 @@
+import { signOut } from "firebase/auth";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { FaSearch, FaShoppingCart, FaSignOutAlt, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { User } from "../types/types";
 import { auth } from "../firebase";
-import { signOut } from "firebase/auth";
-import toast from "react-hot-toast";
+import { User } from "../types/types";
 
 
 interface PropsType {
