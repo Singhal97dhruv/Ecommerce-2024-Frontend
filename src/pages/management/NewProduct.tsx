@@ -8,7 +8,7 @@ import { responseToast } from "../../utils/features";
 
 const NewProduct = () => {
 
-  const {user,loading}=useSelector(
+  const {user}=useSelector(
     (state: {userReducer:UserReducerInitialState})=>state.userReducer
   )
 

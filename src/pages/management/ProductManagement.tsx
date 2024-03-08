@@ -12,8 +12,8 @@ import { server } from "../../redux/store";
 import { UserReducerInitialState } from "../../types/reducerTypes";
 import { responseToast } from "../../utils/features";
 
-const img =
-  "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-james-wheeler-414612.jpg&fm=jpg";
+// const img =
+  // "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-james-wheeler-414612.jpg&fm=jpg";
 const ProductManagement = () => {
   const { user } = useSelector(
     (state: { userReducer: UserReducerInitialState }) => state.userReducer

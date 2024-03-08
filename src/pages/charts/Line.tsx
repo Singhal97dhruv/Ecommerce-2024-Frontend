@@ -16,7 +16,7 @@ const Line = () => {
   const product = data?.charts.product || [];
   const revenue = data?.charts.revenue || [];
   const users = data?.charts.users || [];
-  const discount = data?.charts.discount || [];
+  const discount = data?.charts .discount || [];
 
   if (isError) {
     const err = error as CustomError;
@@ -70,8 +70,8 @@ const Line = () => {
 
         <section>
           <LineChart
-            data={revenue}
-            label="Users"
+            data={discount}
+            label="Discount"
             backgroundColor={`hsl(211,20%,50%)`}
             borderColor={`hsl(230,80%,80%)`}
             labels={months}
