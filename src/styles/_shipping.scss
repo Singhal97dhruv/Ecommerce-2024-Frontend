@@ -1,0 +1,51 @@
+.shipping {
+    background-image: url("https://images.unsplash.com/photo-1637825891028-564f672aa42c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    height: calc(100vh - 2.25rem);
+    object-fit: cover;
+    >h1{
+        @include heading;
+        margin-top: 3rem;
+        color: white;
+    }
+  @include flex(column, center, center, 2rem);
+  > form {
+    width: 100%;
+    max-width: 50rem;
+    @include flex(column, center, center, 2rem);
+    > input, >select {
+       
+        background: none;
+        color: white;
+      height: 3rem;
+      width: 70%;
+      border-radius: 5px;
+      padding: 1rem;
+      border: none;
+      border-bottom: 1px solid orangered;
+      >option{
+        color: black;
+      }
+    }
+    ::placeholder{
+        color: white;
+    }
+    >button{
+        width: 30%;
+        height: 4rem;
+        margin-top: 2rem;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        color: yellow;
+        text-align: center;
+        // background: none;
+        background-color: red;
+        border: none;
+        box-shadow: 2px 1px 5px black;
+        transition: 0.3s;
+        &:hover {
+          opacity: 0.7;
+        }
+    }
+
+  }
+}

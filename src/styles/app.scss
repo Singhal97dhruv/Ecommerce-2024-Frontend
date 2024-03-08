@@ -1,0 +1,301 @@
+@import "mixin";
+@import "dashboard";
+@import "product";
+@import "chart";
+@import "cart";
+@import "shipping";
+@import "login";
+@import "loader";
+
+@import "search";
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  // background-color: #718093;
+  background-image: url("https://images.unsplash.com/photo-1557682257-2f9c37a3a5f3?q=80&w=1700&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.red {
+  color: rgb(255, 0, 0);
+}
+.purple {
+  color: rgb(47, 0, 255);
+}
+.green {
+  color: rgba(3, 255, 3, 0.996);
+}
+
+.container {
+  // background-color: rgba(17, 16, 16, 0.607);
+  // background-color: #718093;
+background-image: url("https://images.unsplash.com/photo-1557682257-2f9c37a3a5f3?q=80&w=1700&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+  .posterContainer {
+    height: calc(100vh - 2rem);
+
+    @include flex(row, unset, center, 0);
+
+    .homePageContent {
+      padding: 8rem;
+      padding-top: 8rem;
+      height: 100%;
+      width: 50%;
+      // background-color: pink;
+      > h1 {
+        font-size: 4rem;
+        color: yellow;
+      }
+      > h4 {
+        font-size: 2rem;
+        color: rgba(4, 4, 10, 0.567);
+        // color:
+      }
+      > button {
+        margin: 2rem 0 0 0;
+        font-size: 1.3rem;
+        background-color: yellow;
+        color: orangered;
+        border: 1px solid orangered;
+        border-radius: 10px;
+        padding: 5px;
+        box-shadow: 2px 1px 10px orangered;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.7;
+          transform: translateY(1px);
+        }
+      }
+    }
+  }
+  .homePagePhoto {
+    width: 50%;
+    padding: 0;
+    // overflow: hidden;
+    transform: translateY(-15px);
+    margin: 0;
+    // background-color: pink;
+    height: 100%;
+    // background-image: url("https://i0.wp.com/www.ritzmagazine.in/wp-content/uploads/2019/10/MS-Dhoni-5.jpg?fit=696%2C696&ssl=1");
+
+   .swiperImages {
+      height: 100%;
+      padding: 2rem;
+
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .homeContents{
+    padding: 3rem 2rem 0 2rem;
+    height: 100vw;
+    
+    >h2{
+      @include heading;
+      @include flex(row,space-between,unset);
+      font-size: 2rem;
+      .findMore{
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+    .products{
+      @include flex(row,flex-start,space-around,3rem);
+      flex-wrap: wrap;
+    }
+
+  }
+}
+
+.header {
+  @include flex(row, flex-end, unset, 1rem);
+  padding: 0.3rem 1rem 0.3rem 0;
+  // background-color: rgba(19, 5, 5, 0.783);
+  background-color: black;
+  // position: sticky;
+  // z-index: 100;
+  // top: 0;
+  a {
+    color: orangered;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    &:hover {
+      // color: yellow;
+      opacity: 0.7;
+    }
+  }
+  dialog {
+    border: 1px solid #fff;
+    position: absolute;
+    top: 2.3rem;
+    width: 100px;
+    left: calc(100% - 101px);
+    z-index: 8;
+    > div {
+      @include flex(column, flex-start, center, 0.25rem);
+    }
+  }
+}
+.orders{
+  >h2{
+    @include heading;
+    margin: 4rem 0 0 4rem;
+    font-size: 2rem
+  }
+}
+
+.checkoutContainer{
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  >form{
+    @include flex(column,flex-start,stretch,2rem);
+
+    >button{
+      // @include btn(1rem,$color3,$color1);
+      background-color: blue;
+      color: white;
+      height: 2.5rem;
+      border-radius: 10px;
+      width: 100%;
+      cursor: pointer;
+      font-size: 1.1rem;
+      border: 1px solid white;
+      box-shadow: 1px 1px 5px black;
+      transition: 0.3s ease-in;
+      &:hover{
+        opacity: 0.7;
+        box-shadow: none;
+      }
+    }
+    
+  }
+}
+
+
+
+.adminContainer {
+  @include grid(1fr 4fr, 2rem);
+  height: 100vh;
+  // background-color: rgba(17, 16, 16, 0.607);
+  background-color: #718093;
+  background-image: url("https://images.unsplash.com/photo-1557683311-eac922347aa1?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+  > aside {
+    width: 100%;
+    color: white;
+    max-width: 40rem;
+    // background-color: rgba(19, 5, 5, 0.783);
+    background-color: rgba(0, 0, 0, 0.833);
+    overflow-y: auto;
+    z-index: 10;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    > div {
+      margin: 2rem 1rem;
+      // background-color: rgba(232, 13, 38, 0.912);
+      > h5 {
+        @include heading(2px);
+        opacity: 0.8;
+        margin: 1rem 0;
+      }
+      > ul {
+        @include flex(column, unset, unset, 0.5rem);
+        list-style: none;
+        font-weight: 500;
+        > li {
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          > a {
+            color: orangered;
+            @include flex(row, unset);
+          }
+        }
+      }
+    }
+  }
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  th,
+  td {
+    padding: 5px;
+    text-align: left;
+    vertical-align: middle;
+  }
+  th {
+    font-weight: bold;
+    color: black;
+    font-size: 1.1rem;
+    padding: 2rem 1rem;
+  }
+  tbody {
+    tr {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.093);
+    }
+    td {
+      padding: 1rem;
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+      img {
+        @include square(4.5rem);
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      a {
+        text-decoration: none;
+        background-color: yellow;
+        color: black;
+        font-weight: 700;
+        padding: 0.25rem 0.5rem;
+        border-radius: 10px;
+        // box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.503);
+        box-shadow: 2px 1px 10px orangered;
+
+        // border: 1px solid black;
+      }
+      button {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.3rem;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: yellow;
+
+        &:hover {
+          transition: 0.3s;
+          color: rgb(255, 44, 44);
+          transform: translateY(-2px);
+        }
+      }
+      &:first-child {
+        border-left: none;
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

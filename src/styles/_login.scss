@@ -1,0 +1,51 @@
+.login{
+    background-image: url("https://images.unsplash.com/photo-1654198340681-a2e0fc449f1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    height: calc(100vh - 2.25rem);
+    object-fit: cover;
+    color: white;
+    @include flex(column,unset,center,2rem);
+    padding: 10rem;
+    >h1{
+        @include heading;
+        font-size: 3rem;
+    }
+    >div{
+        @include flex(column,center,flex-start,.3rem);
+        width: 30rem;
+        font-size: 1.3rem;
+        >input, >select{
+            height: 3rem;
+            width: 100%;
+            background: none;
+            color: white;
+            // border: 1px solid ;
+            padding: 7px;
+            border-radius: 10px;
+            >option{
+                color: black;
+            }
+        }
+        >p{
+            font-size: 0.8rem;
+        }
+        >button{
+            width: 60%;
+            height: 3rem;
+            margin: auto;
+            margin-top: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            
+            @include flex(row,space-around,center);
+            >svg{
+                max-width: 3rem;
+                @include square(100%);
+                
+            }
+            >span{
+                font-size: 1.1rem;
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.chartContainer{
+    padding: 4rem;
+    overflow-y: auto;
+    >h1{
+        margin-left: 2rem;
+        margin-bottom: 4rem;
+        color: white;
+    }
+    >section{
+        >div{
+            width: 50%;
+            // align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            height: 30rem;
+        }
+    >h2{
+        text-align: center;
+        font-weight: 300;
+        margin: 1rem 0 3rem 0;
+        color: yellow;
+        @include heading;
+
+    }
+    }
+}

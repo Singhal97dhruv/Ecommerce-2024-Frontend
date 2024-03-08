@@ -1,0 +1,163 @@
+.dashboard {
+  overflow-y: auto;
+
+  .bar {
+    @include flex(row, unset);
+    height: 4rem;
+    padding: 0 1rem;
+    border-bottom: 1px solid black;
+    > input {
+      margin-right: auto;
+      @include inputStyle(100%, 1rem 0);
+      color: yellow;
+    }
+    > input::placeholder {
+      color: yellow;
+      opacity: 0.6;
+    }
+    > svg {
+      font-size: 1.4rem;
+      opacity: 0.7;
+    }
+    > img {
+      @include square(3rem);
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .widgetContainer {
+    @include flex(row, space-between, stretch, 2rem);
+    padding: 2rem 2rem 2rem 0;
+  }
+  .widget {
+    width: 16rem;
+    background-color: yellow;
+    box-shadow: 5px 5px 10px black;
+    padding: 2rem;
+    border-radius: 10px;
+    @include flex(row, space-between, stretch, 0);
+
+    .widgetInfo {
+      > h5 {
+        font-size: 0.8rem;
+        opacity: 0.7;
+      }
+      > h3 {
+        font-size: 1.5rem;
+      }
+      > span {
+        @include flex(row, unset, center, 0.2rem);
+      }
+    }
+    .widgetCircle {
+      position: relative;
+      @include square(5rem);
+      border-radius: 50%;
+      flex: none;
+      display: grid;
+      place-items: center;
+      &::before {
+        content: "";
+        position: absolute;
+        @include square(4rem);
+        border-radius: 50%;
+        background-color: yellow;
+      }
+      span {
+        position: relative;
+      }
+    }
+  }
+  .graphContainer {
+    @include flex(row, unset, unset, 1rem);
+    padding: 0 2rem 2rem 0;
+  }
+  .revenueGraph {
+    width: 100%;
+    padding: 1rem 3rem;
+    background-color: rgba(255, 255, 0, 0.413);
+    border-radius: 10px;
+    > h2 {
+      @include heading;
+      margin: 1rem 0 2rem 0.25rem;
+      text-align: center;
+    }
+  }
+  .inventoryInfo {
+    width: 100%;
+    max-width: 18rem;
+    background-color: rgba(255, 255, 0, 0.413);
+    border-radius: 10px;
+    @include flex(column, center, unset, 5rem);
+    padding: 1rem 1rem;
+    > h2 {
+      @include heading;
+      margin: 1.5rem 0 0.5rem 0.25rem;
+      text-align: center;
+      // font-weight: 200;
+    }
+    > div {
+      overflow-y: auto;
+      padding-left: 0.5rem;
+    }
+    .categoryItem {
+      @include flex(row, space-between);
+      padding: 1rem;
+      width: 100%;
+      > h5 {
+        letter-spacing: 1px;
+        // font-weight: 300;
+      }
+      > div {
+        margin-left: auto;
+        width: 6rem;
+        background-color: rgba(17, 16, 16, 0.607);
+        height: 0.5rem;
+        border-radius: 20px;
+        flex: none;
+        > div {
+          height: 100%;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+  .transactionContainer {
+    @include flex(row, unset, unset, 2rem);
+    padding: 0 2rem 2rem 0;
+    height: 30rem;
+    > div {
+      background-color: rgba(255, 255, 0, 0.413);
+      box-shadow: 5px 5px 10px black;
+      border-radius: 10px;
+    }
+    .genderChart{
+        width: 100%;
+        max-width: 20rem;
+        padding: 1rem;
+        position: relative;
+        >h2{
+            @include heading;
+            margin: 1.5rem 0 2rem 0;
+            text-align: center;
+        }
+        >p{
+            position: absolute;
+            @include posCenter;
+            font-size: 3rem;
+
+        }
+    }
+    .transactionBox{
+        width: 100%;
+        padding: 1rem;
+        overflow-x: auto;
+        >h2{
+            @include heading;
+            text-align: center;
+            margin: 0 1rem 0 1rem;
+        }
+    }
+  }
+}

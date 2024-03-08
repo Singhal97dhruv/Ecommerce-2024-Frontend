@@ -1,0 +1,81 @@
+.productSearchPage {
+  height: calc(100vh - 2.25rem);
+  @include flex(row, center, flex-start,3rem);
+  padding: 2rem;
+  > aside {
+    width: 30%;
+    background-color: black;
+    color: orangered;
+    height: 100%;
+    border-radius: 20px;
+    @include flex(column, stretch, flex-start);
+    padding: 2rem;
+    margin: 0;
+    > h2 {
+      @include heading;
+        font-size: 2rem;
+    }
+    >div{
+        padding: .5rem;
+        font-size: 1.3rem;
+        >input,>select{
+            background-color: black;
+            color: yellow;
+            border-radius: 20px;
+            height: 2rem;
+            opacity: 0.7;
+            width: 20rem;
+            border: none;
+            font-size: 0.9rem;
+        }
+        >select:active{
+            opacity: 1;
+            border: none;
+        }
+    }
+  }
+  > main {
+    width: 70%;
+    padding: 0 2rem;
+    >h1{
+        @include heading;
+    }
+    >input{
+        @include inputStyle(100%);
+        // border-bottom: 1px solid black;
+        color: yellow;
+        cursor: pointer;
+        font-size: 1.1rem;
+    }
+    ::placeholder{
+        color: yellow;
+    }
+    .searchProductList{
+        @include flex(row,flex-start,flex-start);
+        flex-wrap: wrap;
+        height: calc((100vh - 15rem));
+        overflow-y: auto;
+    }
+    >article{
+        @include flex;
+        padding: 1rem;
+        >button{
+            width: 10%;
+            height: 2rem;
+            // margin: auto;
+            // margin-top: 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: orangered;
+            color: black;
+            border-color: none;
+            box-shadow: 10px 10px 10px solid orangered;
+            opacity: 0.7;
+        }
+        &:hover{
+            opacity: 1;
+        }
+        
+    }
+  }
+}
