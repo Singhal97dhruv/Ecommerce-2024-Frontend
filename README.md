@@ -1,3 +1,6 @@
+Due to free hosting servers there may be some downtime would be experienced. You can checkout my linkedin post related to the same link for that i provide below.
+**https://www.linkedin.com/feed/update/urn:li:activity:7178496620567691264/**
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
